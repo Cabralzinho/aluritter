@@ -1,5 +1,5 @@
-import { auth, database } from "@/firebase/firebase";
-import { child, get, getDatabase, onValue, ref } from "firebase/database";
+import { auth } from "@/firebase/firebase";
+import { getDatabase, onValue, ref } from "firebase/database";
 import { useEffect, useState } from "react";
 
 type PostData = {

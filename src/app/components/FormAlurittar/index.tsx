@@ -1,6 +1,6 @@
 import { auth } from "@/firebase/firebase";
 import { getDatabase, push, ref, set } from "firebase/database";
-import { HTMLAttributes, useState } from "react";
+import { useState } from "react";
 
 type writeDataBaseProps = {
   userID: string | null | undefined;

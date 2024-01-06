@@ -1,6 +1,6 @@
 "use client";
 
-import { Input } from "@/app/components/Input";
+import Input from "@/app/components/Input";
 import { auth } from "@/firebase/firebase";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { createUserWithEmailAndPassword } from "firebase/auth";
