@@ -1,6 +1,6 @@
 "use client";
 
-import { auth } from "@/firebase/firebase";
+import { auth } from "@/lib/firebase-config";
 import { Button } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/navigation";

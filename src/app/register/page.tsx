@@ -3,7 +3,7 @@ import { FormRegister } from "./components/FormRegister";
 
 export default function Register() {
   return (
-    <main className="h-full flex flex-col justify-center items-center gap-4 mobile:px-2">
+    <main className="h-full flex flex-col justify-center items-center gap-4 mobile:px-4">
       <h1 className="text-4xl text-cyan-500">Aluritter</h1>
       <h2 className="text-2xl text-cyan-600">Crie sua conta</h2>
       <FormRegister />

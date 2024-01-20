@@ -3,7 +3,7 @@ import { useAuthentication } from "@/hooks/useAuthentication";
 import { Avatar, Divider, Menu, MenuItem } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { signOut } from "firebase/auth";
-import { auth } from "@/firebase/firebase";
+import { auth } from "@/lib/firebase-config";
 import { Notification } from "@/app/components/Notification";
 
 export const Navbar = () => {
@@ -65,7 +65,7 @@ export const Navbar = () => {
         text="Deslogado com sucesso"
         vertical="top"
         horizontal="center"
-      />
+      />  
     </>
   );
 };

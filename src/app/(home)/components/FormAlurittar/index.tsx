@@ -1,7 +1,8 @@
-import { auth } from "@/firebase/firebase";
+import { auth } from "@/lib/firebase-config";
 import { getDatabase, push, ref, set } from "firebase/database";
 import { useState } from "react";
 import { Notification } from "../../../components/Notification";
+import { Button } from "@mui/material";
 
 export const FormAlurittar = () => {
   const [maxLetters, setMaxLetters] = useState<number>(255);
@@ -82,16 +83,16 @@ export const FormAlurittar = () => {
         value={inputText}
         className="border border-slate-300 h-[8rem] max-h-[8rem] resize-none outline-none px-2 rounded"
       />
-      <div className="flex justify-between">
+      <div className="flex justify-between flex-wrap gap-y-2">
         <p className="text-green-500 text-sm">
           Você ainda pode digitar {maxLetters} caracteres
         </p>
-        <button
+        <Button
           type="submit"
-          className="bg-cyan-500 hover:bg-cyan-400 transition-all text-white px-4 py-2 rounded"
+          className="bg-cyan-500 hover:bg-cyan-400 transition-all text-white px-4 mobile:px-2"
         >
           Aluritar
-        </button>
+        </Button>
       </div>
       <Notification
         open={success}

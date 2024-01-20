@@ -1,6 +1,6 @@
 "use client";
 
-import { auth } from "@/firebase/firebase";
+import { auth } from "@/lib/firebase-config";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button, CircularProgress, TextField } from "@mui/material";
 import { sendPasswordResetEmail } from "firebase/auth";
@@ -64,14 +64,6 @@ export const FormRecoveryPassword = () => {
         >
           Recuperar Senha
         </Button>
-      )}
-      {isSubmitSuccessful && (
-        <Link
-          className="text-lg text-cyan-600 hover:text-cyan-500"
-          href="/login"
-        >
-          Voltar para o login
-        </Link>
       )}
     </form>
   );

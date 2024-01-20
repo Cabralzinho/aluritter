@@ -1,4 +1,4 @@
-import { auth } from "@/firebase/firebase";
+import { auth } from "@/lib/firebase-config";
 import { getDatabase, onChildRemoved, onValue, ref } from "firebase/database";
 import { useEffect, useState } from "react";
 import { Post } from "./Post";

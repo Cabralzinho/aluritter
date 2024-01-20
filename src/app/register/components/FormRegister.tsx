@@ -1,7 +1,7 @@
 "use client";
 
 import { Notification } from "@/app/components/Notification";
-import { auth } from "@/firebase/firebase";
+import { auth } from "@/lib/firebase-config";
 import { UtilsValidate } from "@/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {

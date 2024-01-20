@@ -1,6 +1,6 @@
 "use client";
 
-import { auth } from "@/firebase/firebase";
+import { auth } from "@/lib/firebase-config";
 import { useRouter } from "next/navigation";
 import { Navbar } from "./components/Navbar";
 import { FormAlurittar } from "./components/FormAlurittar";
@@ -8,8 +8,10 @@ import { PostAluritter } from "./components/PostAluritter";
 export default function Home() {
   const router = useRouter();
 
+  console.log(auth.currentUser)
+
   auth.onAuthStateChanged((user) => {
-    if (!user || auth.currentUser?.emailVerified === false) {
+    if (!user) {
       router.push("/login");
     }
   });

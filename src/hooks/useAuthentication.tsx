@@ -1,4 +1,4 @@
-import { auth } from "@/firebase/firebase"
+import { auth } from "@/lib/firebase-config"
 import firebase from "firebase/compat/app"
 import { useEffect, useState } from "react"
 

@@ -1,15 +1,11 @@
 "use client";
 
 import { Notification } from "@/app/components/Notification";
-import { auth } from "@/firebase/firebase";
+import { auth } from "@/lib/firebase-config";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button, CircularProgress, TextField } from "@mui/material";
 import { FirebaseError } from "firebase/app";
-import {
-  AuthError,
-  getRedirectResult,
-  signInWithEmailAndPassword,
-} from "firebase/auth";
+import { AuthError, getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -25,13 +21,14 @@ const schema = z.object({
 
 export const FormLogin = () => {
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false);
 
   const router = useRouter();
 
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitSuccessful, isSubmitting },
+    formState: { errors, isSubmitting },
   } = useForm({
     mode: "all",
     resolver: zodResolver(schema),
@@ -42,9 +39,11 @@ export const FormLogin = () => {
       await signInWithEmailAndPassword(auth, data.email, data.password);
 
       setError("");
+      setSuccess(true)
 
       router.push("/");
     } catch (err: Errors) {
+      setSuccess(false);
       setError("Credênciais inválidas");
     }
   });
@@ -94,7 +93,7 @@ export const FormLogin = () => {
       )}
       <p className="text-lg text-red-500 text-center">{error}</p>
       <Notification
-        open={isSubmitSuccessful}
+        open={success}
         severity="success"
         vertical="top"
         horizontal="center"

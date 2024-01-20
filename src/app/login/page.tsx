@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { FormLogin } from "./components/FormLogin";
+import { applyActionCode, getAuth } from "firebase/auth";
+import { useEffect } from "react";
+import { actionCode } from "@/lib/firebase-config";
 
 export default function Login() {
-
   return (
-    <main className="h-full flex flex-col justify-center items-center gap-4 mobile:px-2">
+    <main className="h-full flex flex-col justify-center items-center gap-4 mobile:px-4">
       <h1 className="text-3xl text-cyan-500">Aluritter</h1>
       <h2 className="text-2xl text-cyan-600">Entrar na conta</h2>
       <FormLogin />
