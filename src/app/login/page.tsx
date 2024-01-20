@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { FormLogin } from "./components/FormLogin";
-import { applyActionCode, getAuth } from "firebase/auth";
-import { useEffect } from "react";
-import { actionCode } from "@/lib/firebase-config";
+import { ActionCodeURL } from "firebase/auth";
 
 export default function Login() {
   return (

@@ -36,12 +36,14 @@ export const FormLogin = () => {
 
   const onSubmitLogin = handleSubmit(async (data) => {
     try {
-      await signInWithEmailAndPassword(auth, data.email, data.password);
+      if (typeof window !== "undefined") {
+        await signInWithEmailAndPassword(auth, data.email, data.password);
 
-      setError("");
-      setSuccess(true)
+        setError("");
+        setSuccess(true);
 
-      router.push("/");
+        router.push("/");
+      }
     } catch (err: Errors) {
       setSuccess(false);
       setError("Credênciais inválidas");

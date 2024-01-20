@@ -55,13 +55,15 @@ export const FormDefineNewPassword = () => {
 
   const handleSubmitPassword = handleSubmit(async (data) => {
     try {
-      const actionCode = ActionCodeURL.parseLink(window.location.href)?.code;
+      if (typeof window !== "undefined") {
+        const actionCode = ActionCodeURL.parseLink(window.location.href)?.code;
 
-      await verifyPasswordResetCode(auth, actionCode as string);
+        await verifyPasswordResetCode(auth, actionCode as string);
 
-      await confirmPasswordReset(auth, actionCode as string, data.password);
+        await confirmPasswordReset(auth, actionCode as string, data.password);
 
-      router.push("/login");
+        router.push("/login");
+      }
     } catch (err) {
       console.log(err);
     }
@@ -93,7 +95,14 @@ export const FormDefineNewPassword = () => {
           <CircularProgress />
         </div>
       )}
-      {!isSubmitting && <Button className="bg-green-600 hover:bg-green-500 text-white" type="submit">Definir senha</Button>}
+      {!isSubmitting && (
+        <Button
+          className="bg-green-600 hover:bg-green-500 text-white"
+          type="submit"
+        >
+          Definir senha
+        </Button>
+      )}
       <Notification
         open={isSubmitSuccessful}
         text="Senha alterada com sucesso"

@@ -67,25 +67,27 @@ export const FormRegister = () => {
 
   const onSubmitRegister = handleSubmit(async (data) => {
     try {
-      const userCredential = await createUserWithEmailAndPassword(
-        auth,
-        data.email,
-        data.password
-      );
+      if (typeof window !== "undefined") {
+        const userCredential = await createUserWithEmailAndPassword(
+          auth,
+          data.email,
+          data.password
+        );
 
-      const user = userCredential.user;
+        const user = userCredential.user;
 
-      if (user) {
-        await updateProfile(user, {
-          displayName: data.name,
-        });
+        if (user) {
+          await updateProfile(user, {
+            displayName: data.name,
+          });
+        }
+
+        auth.useDeviceLanguage();
+
+        await sendEmailVerification(user);
+
+        router.push("/register/confirmation");
       }
-
-      auth.useDeviceLanguage()
-
-      await sendEmailVerification(user);
-
-      router.push("/register/confirmation");
     } catch (err) {
       setError("Email já existe");
     }

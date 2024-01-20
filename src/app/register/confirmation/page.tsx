@@ -10,7 +10,7 @@ export default function Confirmation() {
   const router = useRouter();
 
   useEffect(() => {
-    if (auth.currentUser === null) {
+    if (typeof window !== 'undefined' && auth.currentUser === null) {
       return router.push("/login");
     }
   }, [auth.currentUser]);

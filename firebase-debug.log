@@ -1,0 +1,470 @@
+[debug] [2024-01-20T16:53:42.625Z] ----------------------------------------------------------------------
+[debug] [2024-01-20T16:53:42.629Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-01-20T16:53:42.630Z] CLI Version:   13.0.2
+[debug] [2024-01-20T16:53:42.630Z] Platform:      win32
+[debug] [2024-01-20T16:53:42.630Z] Node Version:  v20.10.0
+[debug] [2024-01-20T16:53:42.632Z] Time:          Sat Jan 20 2024 13:53:42 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2024-01-20T16:53:42.632Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-20T16:53:42.640Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-01-20T16:53:42.887Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-20T16:53:42.888Z] > authorizing via signed-in user (thiago255555555@gmail.com)
+[debug] [2024-01-20T16:53:42.888Z] [iam] checking project aluritter-ec6f6 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-01-20T16:53:42.889Z] > refreshing access token with scopes: []
+[debug] [2024-01-20T16:53:42.891Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-01-20T16:53:42.891Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-20T16:53:43.191Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-01-20T16:53:43.192Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-20T16:53:43.217Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/aluritter-ec6f6:testIamPermissions [none]
+[debug] [2024-01-20T16:53:43.218Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/aluritter-ec6f6:testIamPermissions x-goog-quota-user=projects/aluritter-ec6f6
+[debug] [2024-01-20T16:53:43.218Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aluritter-ec6f6:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-20T16:53:43.339Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-01-20T16:53:43.339Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-01-20T16:53:44.192Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/aluritter-ec6f6:testIamPermissions 200
+[debug] [2024-01-20T16:53:44.192Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aluritter-ec6f6:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-20T16:53:44.193Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/aluritter-ec6f6 [none]
+[debug] [2024-01-20T16:53:44.657Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/aluritter-ec6f6 200
+[debug] [2024-01-20T16:53:44.658Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/aluritter-ec6f6 {"projectId":"aluritter-ec6f6","projectNumber":"290853162928","displayName":"Aluritter","name":"projects/aluritter-ec6f6","resources":{"hostingSite":"aluritter-ec6f6","realtimeDatabaseInstance":"aluritter-ec6f6-default-rtdb"},"state":"ACTIVE","etag":"1_24fd13ac-bbd9-4e9d-9f66-3d150797a112"}
+[debug] [2024-01-20T16:53:53.759Z] defaultcredentials: writing to file C:\Users\thica\AppData\Roaming\firebase\thiago255555555_gmail_com_application_default_credentials.json
+[debug] [2024-01-20T16:53:53.767Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/aluritter-ec6f6/sites pageToken=&pageSize=10
+[debug] [2024-01-20T16:53:55.143Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/aluritter-ec6f6/sites 200
+[debug] [2024-01-20T16:53:55.143Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/aluritter-ec6f6/sites {"sites":[{"name":"projects/aluritter-ec6f6/sites/aluritter-ec6f6","defaultUrl":"https://aluritter-ec6f6.web.app","appId":"1:290853162928:web:406b9cef94e802f581d075","type":"DEFAULT_SITE"}]}
+[debug] [2024-01-20T16:53:55.143Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:290853162928:web:406b9cef94e802f581d075/config [none]
+[debug] [2024-01-20T16:53:56.197Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:290853162928:web:406b9cef94e802f581d075/config 200
+[debug] [2024-01-20T16:53:56.197Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:290853162928:web:406b9cef94e802f581d075/config {"projectId":"aluritter-ec6f6","appId":"1:290853162928:web:406b9cef94e802f581d075","databaseURL":"https://aluritter-ec6f6-default-rtdb.firebaseio.com","storageBucket":"aluritter-ec6f6.appspot.com","apiKey":"AIzaSyDXq2CWrZ3-oDGNshE72P-PyqwJdPdqUXc","authDomain":"aluritter-ec6f6.firebaseapp.com","messagingSenderId":"290853162928"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-01-20T16:54:27.256Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/aluritter-ec6f6/sites/aluritter-ec6f6 [none]
+[debug] [2024-01-20T16:54:28.255Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/aluritter-ec6f6/sites/aluritter-ec6f6 200
+[debug] [2024-01-20T16:54:28.256Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/aluritter-ec6f6/sites/aluritter-ec6f6 {"name":"projects/aluritter-ec6f6/sites/aluritter-ec6f6","defaultUrl":"https://aluritter-ec6f6.web.app","appId":"1:290853162928:web:406b9cef94e802f581d075","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 14.0.4
+
+[info] 
+   Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Linting and checking validity of types ...
+
+[info] 
+./src/app/register/confirmation/page.tsx
+16:6  Warning: React Hook useEffect has a missing dependency: 'router'. Either include it or remove the dependency array. Outer scope values like 'auth.currentUser' aren't valid dependencies because mutating them doesn't re-render the component.  react-hooks/exhaustive-deps
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/9) ...
+
+[info] ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\(home)\page.js:1:20042)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 6690 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\(home)\page.js:1:3803)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:94352
+    at W._fromJSON (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:94790)
+    at JSON.parse (<anonymous>)
+    at N (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91658)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:98043)
+
+Error occurred prerendering page "/". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\(home)\page.js:1:20042)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 6690 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\(home)\page.js:1:3803)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:94352
+    at W._fromJSON (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:94790)
+    at JSON.parse (<anonymous>)
+    at N (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91658)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:98043)
+
+[info]    Generating static pages (2/9) 
+
+[info] ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\register\page.js:1:6737)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 8172 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\login\page.js:1:4049)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at $ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:90488)
+    at rC (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:33840)
+    at n$ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:59861)
+    at nj (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64628)
+    at nO (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64035)
+
+[info] 
+Error occurred prerendering page "/login". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\register\page.js:1:6737)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 8172 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\login\page.js:1:4049)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at $ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:90488)
+    at rC (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:33840)
+    at n$ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:59861)
+    at nj (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64628)
+    at nO (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64035)
+
+[info]    Generating static pages (4/9) 
+
+[info] ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\(home)\page.js:1:20042)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 6732 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\definir-senha\page.js:1:4031)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at $ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:90488)
+    at rC (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:33840)
+    at n$ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:59861)
+    at nj (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64628)
+    at nO (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64035)
+
+Error occurred prerendering page "/definir-senha". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\(home)\page.js:1:20042)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 6732 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\definir-senha\page.js:1:4031)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at $ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:90488)
+    at rC (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:33840)
+    at n$ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:59861)
+    at nj (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64628)
+    at nO (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64035)
+
+[info] ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\register\page.js:1:6737)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 3925 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\register\page.js:1:4035)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at $ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:90488)
+    at rC (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:33840)
+    at n$ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:59861)
+    at nj (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64628)
+    at nO (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64035)
+
+Error occurred prerendering page "/register". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\register\page.js:1:6737)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 3925 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\register\page.js:1:4035)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at $ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:90488)
+    at rC (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:33840)
+    at n$ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:59861)
+    at nj (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64628)
+    at nO (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64035)
+
+[info]    Generating static pages (6/9) 
+
+[info] ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\register\confirmation\page.js:1:5187)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 5105 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\register\confirmation\page.js:1:3879)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:94352
+    at W._fromJSON (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:94790)
+    at JSON.parse (<anonymous>)
+    at N (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91658)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:98043)
+
+[info] ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\recuperar-senha\page.js:1:5195)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 5565 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\recuperar-senha\page.js:1:3813)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at $ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:90488)
+    at rC (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:33840)
+    at n$ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:59861)
+    at nj (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64628)
+    at nO (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64035)
+
+Error occurred prerendering page "/recuperar-senha". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\recuperar-senha\page.js:1:5195)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 5565 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\recuperar-senha\page.js:1:3813)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at $ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:90488)
+    at rC (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:33840)
+    at n$ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:59861)
+    at nj (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64628)
+    at nO (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64035)
+
+[info] 
+Error occurred prerendering page "/register/confirmation". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\register\confirmation\page.js:1:5187)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 5105 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\register\confirmation\page.js:1:3879)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:94352
+    at W._fromJSON (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:94790)
+    at JSON.parse (<anonymous>)
+    at N (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91658)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:98043)
+
+[info]  ✓ Generating static pages (9/9) 
+
+[info] 
+
+[info] > Export encountered errors on following paths:
+	/(home)/page: /
+	/definir-senha/page: /definir-senha
+	/login/page: /login
+	/recuperar-senha/page: /recuperar-senha
+	/register/confirmation/page: /register/confirmation
+	/register/page: /register
+
+[debug] [2024-01-20T16:55:11.669Z] Error: ENOENT: no such file or directory, open 'C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-01-20T16:59:06.334Z] ----------------------------------------------------------------------
+[debug] [2024-01-20T16:59:06.346Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-01-20T16:59:06.347Z] CLI Version:   13.0.3
+[debug] [2024-01-20T16:59:06.348Z] Platform:      win32
+[debug] [2024-01-20T16:59:06.349Z] Node Version:  v20.10.0
+[debug] [2024-01-20T16:59:06.349Z] Time:          Sat Jan 20 2024 13:59:06 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2024-01-20T16:59:06.350Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-20T16:59:06.691Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-20T16:59:06.693Z] > authorizing via signed-in user (thiago255555555@gmail.com)
+[debug] [2024-01-20T16:59:06.693Z] [iam] checking project aluritter-ec6f6 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-01-20T16:59:06.701Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/aluritter-ec6f6:testIamPermissions [none]
+[debug] [2024-01-20T16:59:06.701Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/aluritter-ec6f6:testIamPermissions x-goog-quota-user=projects/aluritter-ec6f6
+[debug] [2024-01-20T16:59:06.702Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aluritter-ec6f6:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-20T16:59:08.083Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/aluritter-ec6f6:testIamPermissions 200
+[debug] [2024-01-20T16:59:08.084Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aluritter-ec6f6:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-20T16:59:08.088Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/aluritter-ec6f6 [none]
+[debug] [2024-01-20T16:59:08.757Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/aluritter-ec6f6 200
+[debug] [2024-01-20T16:59:08.758Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/aluritter-ec6f6 {"projectId":"aluritter-ec6f6","projectNumber":"290853162928","displayName":"Aluritter","name":"projects/aluritter-ec6f6","resources":{"hostingSite":"aluritter-ec6f6","realtimeDatabaseInstance":"aluritter-ec6f6-default-rtdb"},"state":"ACTIVE","etag":"1_24fd13ac-bbd9-4e9d-9f66-3d150797a112"}
+[debug] [2024-01-20T16:59:24.207Z] defaultcredentials: writing to file C:\Users\thica\AppData\Roaming\firebase\thiago255555555_gmail_com_application_default_credentials.json
+[debug] [2024-01-20T16:59:24.212Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/aluritter-ec6f6/sites pageToken=&pageSize=10
+[debug] [2024-01-20T16:59:25.808Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/aluritter-ec6f6/sites 200
+[debug] [2024-01-20T16:59:25.808Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/aluritter-ec6f6/sites {"sites":[{"name":"projects/aluritter-ec6f6/sites/aluritter-ec6f6","defaultUrl":"https://aluritter-ec6f6.web.app","appId":"1:290853162928:web:406b9cef94e802f581d075","type":"DEFAULT_SITE"}]}
+[debug] [2024-01-20T16:59:25.809Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:290853162928:web:406b9cef94e802f581d075/config [none]
+[debug] [2024-01-20T16:59:26.894Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:290853162928:web:406b9cef94e802f581d075/config 200
+[debug] [2024-01-20T16:59:26.895Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:290853162928:web:406b9cef94e802f581d075/config {"projectId":"aluritter-ec6f6","appId":"1:290853162928:web:406b9cef94e802f581d075","databaseURL":"https://aluritter-ec6f6-default-rtdb.firebaseio.com","storageBucket":"aluritter-ec6f6.appspot.com","apiKey":"AIzaSyDXq2CWrZ3-oDGNshE72P-PyqwJdPdqUXc","authDomain":"aluritter-ec6f6.firebaseapp.com","messagingSenderId":"290853162928"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-01-20T16:59:44.793Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/aluritter-ec6f6/sites/aluritter-ec6f6 [none]
+[debug] [2024-01-20T16:59:46.146Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/aluritter-ec6f6/sites/aluritter-ec6f6 200
+[debug] [2024-01-20T16:59:46.146Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/aluritter-ec6f6/sites/aluritter-ec6f6 {"name":"projects/aluritter-ec6f6/sites/aluritter-ec6f6","defaultUrl":"https://aluritter-ec6f6.web.app","appId":"1:290853162928:web:406b9cef94e802f581d075","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 14.0.4
+
+[info] 
+   Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Linting and checking validity of types ...
+
+[info] 
+./src/app/register/confirmation/page.tsx
+16:6  Warning: React Hook useEffect has a missing dependency: 'router'. Either include it or remove the dependency array. Outer scope values like 'auth.currentUser' aren't valid dependencies because mutating them doesn't re-render the component.  react-hooks/exhaustive-deps
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/9) ...
+
+[info] ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\(home)\page.js:1:20042)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 6690 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\(home)\page.js:1:3803)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:94352
+    at W._fromJSON (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:94790)
+    at JSON.parse (<anonymous>)
+    at N (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91658)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:98043)
+
+[info]    Generating static pages (2/9) 
+
+[info] 
+Error occurred prerendering page "/". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\(home)\page.js:1:20042)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 6690 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\(home)\page.js:1:3803)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:94352
+    at W._fromJSON (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:94790)
+    at JSON.parse (<anonymous>)
+    at N (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91658)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:98043)
+
+[info] ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\login\page.js:1:6003)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 8172 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\login\page.js:1:4049)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at $ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:90488)
+    at rC (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:33840)
+    at n$ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:59861)
+    at nj (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64628)
+    at nO (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64035)
+
+[info] 
+Error occurred prerendering page "/login". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\login\page.js:1:6003)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 8172 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\login\page.js:1:4049)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at $ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:90488)
+    at rC (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:33840)
+    at n$ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:59861)
+    at nj (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64628)
+    at nO (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64035)
+
+[info]    Generating static pages (4/9) 
+
+[info] ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\recuperar-senha\page.js:1:5195)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 5565 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\recuperar-senha\page.js:1:3813)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at $ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:90488)
+    at rC (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:33840)
+    at n$ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:59861)
+    at nj (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64628)
+    at nO (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64035)
+
+Error occurred prerendering page "/recuperar-senha". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\recuperar-senha\page.js:1:5195)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 5565 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\recuperar-senha\page.js:1:3813)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at $ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:90488)
+    at rC (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:33840)
+    at n$ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:59861)
+    at nj (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64628)
+    at nO (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64035)
+
+[info] ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\(home)\page.js:1:20042)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 3925 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\register\page.js:1:4035)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at $ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:90488)
+    at rC (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:33840)
+    at n$ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:59861)
+    at nj (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64628)
+    at nO (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64035)
+
+Error occurred prerendering page "/register". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\(home)\page.js:1:20042)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 3925 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\register\page.js:1:4035)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at $ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:90488)
+    at rC (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:33840)
+    at n$ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:59861)
+    at nj (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64628)
+    at nO (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64035)
+
+[info]    Generating static pages (6/9) 
+
+[info] ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\register\confirmation\page.js:1:5187)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 5105 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\register\confirmation\page.js:1:3879)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:94352
+    at W._fromJSON (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:94790)
+    at JSON.parse (<anonymous>)
+    at N (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91658)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:98043)
+
+Error occurred prerendering page "/register/confirmation". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\register\confirmation\page.js:1:5187)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 5105 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\register\confirmation\page.js:1:3879)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:94352
+    at W._fromJSON (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:94790)
+    at JSON.parse (<anonymous>)
+    at N (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91658)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:98043)
+
+[info] ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\definir-senha\page.js:1:6092)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 6732 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\definir-senha\page.js:1:4031)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at $ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:90488)
+    at rC (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:33840)
+    at n$ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:59861)
+    at nj (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64628)
+    at nO (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64035)
+
+[info] 
+Error occurred prerendering page "/definir-senha". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: window is not defined
+    at 7062 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\definir-senha\page.js:1:6092)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at 6732 (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\app\definir-senha\page.js:1:4031)
+    at t (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\server\webpack-runtime.js:1:128)
+    at F (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:91937)
+    at $ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:90488)
+    at rC (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:33840)
+    at n$ (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:59861)
+    at nj (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64628)
+    at nO (C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64035)
+
+[info]  ✓ Generating static pages (9/9) 
+
+[info] 
+> Export encountered errors on following paths:
+	/(home)/page: /
+	/definir-senha/page: /definir-senha
+	/login/page: /login
+	/recuperar-senha/page: /recuperar-senha
+	/register/confirmation/page: /register/confirmation
+	/register/page: /register
+
+[debug] [2024-01-20T17:00:27.572Z] Error: ENOENT: no such file or directory, open 'C:\Users\thica\Pictures\programmer\Programação\7-days-to-code\alurriter-next\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.

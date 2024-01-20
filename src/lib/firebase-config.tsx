@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, parseActionCodeURL } from "firebase/auth";
+import { ActionCodeURL, getAuth, parseActionCodeURL } from "firebase/auth";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
@@ -13,8 +13,6 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-
-export const actionCode = parseActionCodeURL(window.location.href)
 
 export const auth = getAuth(app)
 

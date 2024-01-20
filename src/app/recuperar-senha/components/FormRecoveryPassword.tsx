@@ -26,9 +26,10 @@ export const FormRecoveryPassword = () => {
 
   const onSubmitRecovery = handleSubmit(async (data) => {
     try {
-      auth.useDeviceLanguage();
-      
-      await sendPasswordResetEmail(auth, data.email);
+      if (typeof window !== 'undefined') {
+        auth.useDeviceLanguage();
+        await sendPasswordResetEmail(auth, data.email);
+      }  
     } catch (err) {
       console.log(err);
     }
