@@ -4,16 +4,13 @@ import { auth } from "@/lib/firebase-config";
 import { Button } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 
 export default function Confirmation() {
   const router = useRouter();
 
-  useEffect(() => {
-    if (typeof window !== 'undefined' && auth.currentUser === null) {
-      return router.push("/login");
-    }
-  }, [auth.currentUser]);
+  if (typeof window !== "undefined" && auth.currentUser === null) {
+    return router.push("/login");
+  }
 
   return (
     <main className="bg-purple-100 h-full w-full flex justify-center items-center mobile:px-2 px-4">
@@ -29,7 +26,9 @@ export default function Confirmation() {
           tente novamente em alguns minutos
         </p>
         <Link href="/login">
-          <Button className="bg-green-600 hover:bg-green-500 text-white p-2">Ir para o login</Button>
+          <Button className="bg-green-600 hover:bg-green-500 text-white p-2">
+            Ir para o login
+          </Button>
         </Link>
       </div>
     </main>

@@ -8,8 +8,6 @@ import { PostAluritter } from "./components/PostAluritter";
 export default function Home() {
   const router = useRouter();
 
-  console.log(auth.currentUser)
-
   auth.onAuthStateChanged((user) => {
     if (!user) {
       router.push("/login");

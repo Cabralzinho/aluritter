@@ -9,12 +9,15 @@ import {
   ActionCodeURL,
   confirmPasswordReset,
   getAuth,
+  parseActionCodeURL,
   updatePassword,
   verifyPasswordResetCode,
 } from "firebase/auth";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { ActionCodeProps } from "../page";
 
 type FormProps = z.infer<typeof schema>;
 
@@ -39,10 +42,8 @@ const schema = z
     message: "As senhas precisam ser iguais",
   });
 
-export const FormDefineNewPassword = () => {
+export const FormDefineNewPassword = ({actionCode}: ActionCodeProps) => {
   const router = useRouter();
-
-  const user = auth.currentUser;
 
   const {
     register,
@@ -56,11 +57,10 @@ export const FormDefineNewPassword = () => {
   const handleSubmitPassword = handleSubmit(async (data) => {
     try {
       if (typeof window !== "undefined") {
-        const actionCode = ActionCodeURL.parseLink(window.location.href)?.code;
+        
+        await verifyPasswordResetCode(auth, actionCode?.code as string);
 
-        await verifyPasswordResetCode(auth, actionCode as string);
-
-        await confirmPasswordReset(auth, actionCode as string, data.password);
+        await confirmPasswordReset(auth, actionCode?.code as string, data.password);
 
         router.push("/login");
       }
