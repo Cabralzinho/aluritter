@@ -5,19 +5,11 @@ import { auth } from "@/lib/firebase-config";
 import { UtilsValidate } from "@/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button, CircularProgress, TextField } from "@mui/material";
-import {
-  ActionCodeURL,
-  confirmPasswordReset,
-  getAuth,
-  parseActionCodeURL,
-  updatePassword,
-  verifyPasswordResetCode,
-} from "firebase/auth";
+import { confirmPasswordReset, verifyPasswordResetCode } from "firebase/auth";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { ActionCodeProps } from "../page";
+import { ActionCodeProps } from "./page";
 
 type FormProps = z.infer<typeof schema>;
 
@@ -42,7 +34,7 @@ const schema = z
     message: "As senhas precisam ser iguais",
   });
 
-export const FormDefineNewPassword = ({actionCode}: ActionCodeProps) => {
+export const FormDefineNewPassword = ({ actionCode }: ActionCodeProps) => {
   const router = useRouter();
 
   const {
@@ -57,10 +49,13 @@ export const FormDefineNewPassword = ({actionCode}: ActionCodeProps) => {
   const handleSubmitPassword = handleSubmit(async (data) => {
     try {
       if (typeof window !== "undefined") {
-        
         await verifyPasswordResetCode(auth, actionCode?.code as string);
 
-        await confirmPasswordReset(auth, actionCode?.code as string, data.password);
+        await confirmPasswordReset(
+          auth,
+          actionCode?.code as string,
+          data.password
+        );
 
         router.push("/login");
       }

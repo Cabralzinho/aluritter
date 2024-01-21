@@ -2,8 +2,12 @@
 
 import { ActionCodeURL, parseActionCodeURL } from "firebase/auth";
 import { useEffect, useState } from "react";
-import DefinirSenha from "./definir-senha/page";
 import { useRouter } from "next/navigation";
+import { FormDefineNewPassword } from "./FormDefineNewPassword";
+
+export type ActionCodeProps = {
+  actionCode: ActionCodeURL | null
+}
 
 export default function Auth() {
   const [operation, setOperation] = useState("");
@@ -36,7 +40,10 @@ export default function Auth() {
   return (
     <main className="h-full flex justify-center items-center gap-4 mobile:px-4">
       {operation === "PASSWORD_RESET" && (
-        <DefinirSenha actionCode={actionCode} />
+        <main className="h-full w-full flex flex-col justify-center items-center gap-4 mobile:px-4">
+          <h1 className="text-2xl">Escreva sua nova senha</h1>
+          <FormDefineNewPassword actionCode={actionCode} />
+        </main>
       )}
     </main>
   );

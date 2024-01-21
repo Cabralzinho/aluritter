@@ -1,0 +1,34 @@
+[debug] [2024-01-20T21:44:49.433Z] ----------------------------------------------------------------------
+[debug] [2024-01-20T21:44:49.438Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-01-20T21:44:49.439Z] CLI Version:   13.0.3
+[debug] [2024-01-20T21:44:49.440Z] Platform:      win32
+[debug] [2024-01-20T21:44:49.440Z] Node Version:  v20.10.0
+[debug] [2024-01-20T21:44:49.441Z] Time:          Sat Jan 20 2024 18:44:49 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2024-01-20T21:44:49.441Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-20T21:44:49.629Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-20T21:44:49.630Z] > authorizing via signed-in user (thiago255555555@gmail.com)
+[debug] [2024-01-20T21:44:49.630Z] [iam] checking project aluritter-ec6f6 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-01-20T21:44:49.633Z] > refreshing access token with scopes: []
+[debug] [2024-01-20T21:44:49.635Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-01-20T21:44:49.636Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-20T21:44:50.128Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-01-20T21:44:50.129Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-20T21:44:50.147Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/aluritter-ec6f6:testIamPermissions [none]
+[debug] [2024-01-20T21:44:50.148Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/aluritter-ec6f6:testIamPermissions x-goog-quota-user=projects/aluritter-ec6f6
+[debug] [2024-01-20T21:44:50.148Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aluritter-ec6f6:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-20T21:44:51.328Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/aluritter-ec6f6:testIamPermissions 200
+[debug] [2024-01-20T21:44:51.329Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aluritter-ec6f6:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-20T21:44:51.330Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/aluritter-ec6f6 [none]
+[debug] [2024-01-20T21:44:51.893Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/aluritter-ec6f6 200
+[debug] [2024-01-20T21:44:51.894Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/aluritter-ec6f6 {"projectId":"aluritter-ec6f6","projectNumber":"290853162928","displayName":"Aluritter","name":"projects/aluritter-ec6f6","resources":{"hostingSite":"aluritter-ec6f6","realtimeDatabaseInstance":"aluritter-ec6f6-default-rtdb"},"state":"ACTIVE","etag":"1_24fd13ac-bbd9-4e9d-9f66-3d150797a112"}
+[debug] [2024-01-20T21:45:15.422Z] SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at findDependency (C:\Users\thica\AppData\Roaming\nvm\v20.10.0\node_modules\firebase-tools\lib\frameworks\utils.js:188:23)
+    at prepareFrameworks (C:\Users\thica\AppData\Roaming\nvm\v20.10.0\node_modules\firebase-tools\lib\frameworks\index.js:124:64)
+    at deploy (C:\Users\thica\AppData\Roaming\nvm\v20.10.0\node_modules\firebase-tools\lib\deploy\index.js:55:54)
+    at Command.actionFn (C:\Users\thica\AppData\Roaming\nvm\v20.10.0\node_modules\firebase-tools\lib\commands\deploy.js:100:32)
+    at C:\Users\thica\AppData\Roaming\nvm\v20.10.0\node_modules\firebase-tools\lib\command.js:228:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: An unexpected error has occurred.
